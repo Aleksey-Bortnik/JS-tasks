@@ -9,5 +9,3 @@ function sum() {
 }
 
 sum("324", 1, 2, 3, [], "ffffff");
-
-console.log("hewsd; msaflkgbfjvnlasfk;dgm;asf");
