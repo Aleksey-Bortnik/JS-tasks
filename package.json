@@ -8,7 +8,9 @@
     "eslint": "7.30.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.0",
     "lint-staged": "11.0.1",
     "prettier": "2.3.2"
@@ -16,7 +18,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "format": "prettier --write js-tasks"
+    "format": "prettier --write js-tasks",
+    "lint": "eslint ./js-tasks",
+    "lint:fix": "eslint ./js-tasks --fix"
   },
   "repository": {
     "type": "git",
