@@ -1,3 +1,6 @@
 node_modules
 /.vscode
 /.git
+task1.spec.js
+tz.js
+task-sandBox.js
