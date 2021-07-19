@@ -2,6 +2,7 @@ function summ() {
   if (!Object.values(arguments).length) {
     return null;
   }
+
   return Object.values(arguments).reduce(
     (acc, next) =>
       typeof next !== 'boolean' && !Number.isNaN(+next) ? acc + +next : acc,
@@ -13,6 +14,7 @@ function summAdvanced() {
   if (!Object.values(arguments).length) {
     return null;
   }
+
   return Object.values(arguments).reduce((acc, next) => {
     if (typeof next !== 'boolean' && !Number.isNaN(+next)) {
       return acc + +next;
@@ -38,6 +40,7 @@ function callWithFunctionResult(funct1, funct2) {
   if (!funct1 || !funct2) {
     return null;
   }
+
   return funct1(funct2());
 }
 
