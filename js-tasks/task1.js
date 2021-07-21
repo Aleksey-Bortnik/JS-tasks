@@ -29,7 +29,7 @@ function summAdvanced() {
 }
 
 function isValueExists(a) {
-  if (a === null || typeof a === 'undefined') {
+  if (a === undefined || a === null) {
     return false;
   }
 
