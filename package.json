@@ -1,0 +1,36 @@
+{
+  "name": "js-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "7.30.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.0",
+    "jasmine": "^3.8.0",
+    "lint-staged": "11.0.1",
+    "prettier": "2.3.2"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write js-tasks",
+    "lint": "eslint ./js-tasks",
+    "lintAndPrettier": "npm run format && npm run lint",
+    "test" : "jasmine --config=jasmine.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksey-Bortnik/JS-tasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksey-Bortnik/JS-tasks/issues"
+  },
+  "homepage": "https://github.com/Aleksey-Bortnik/JS-tasks#readme"
+}
