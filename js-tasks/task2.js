@@ -44,13 +44,19 @@ function flattenDeep(array) {
   return [];
 }
 
+// function fromPairsFirst(arr) {
+//   if (!arr) return {};
+//   return arr.reduce((acc, next) => {
+//     const [a, b] = next;
+//     acc[a] = b;
+//     return acc;
+//   }, {});
+// }
+
 function fromPairs(arr) {
   if (!arr) return {};
-  return arr.reduce((acc, next) => {
-    const [a, b] = next;
-    acc[a] = b;
-    return acc;
-  }, {});
+
+  return Object.fromEntries(arr);
 }
 
 function uniq(arr) {
