@@ -3,13 +3,12 @@ function chunk(arr, chunks) {
     return [];
   }
 
-  const str = arr.join('');
-  let i = 0;
-  const chunkedArr = arr.map(() => {
-    i += chunks;
-    return str.slice(i - chunks, i).split('');
-  });
-  return chunkedArr.filter(el => el.length !== 0);
+  const result = [];
+  const container = arr.length;
+  for (let i = 0; i < container; i += chunks) {
+    result.push(arr.slice(i, i + chunks));
+  }
+  return result;
 }
 
 function difference(array1, array2) {
