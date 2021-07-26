@@ -88,6 +88,30 @@ function groupBy(arr, cb) {
   }, {});
 }
 
+function isEqual(a, b) {
+  if (a === b) return true;
+
+  if (
+    a === null ||
+    typeof a !== 'object' ||
+    b === null ||
+    typeof b !== 'object'
+  )
+    return false;
+
+  const keysA = Object.keys(a);
+  const keysB = Object.keys(b);
+
+  if (keysA.length !== keysB.length) return false;
+
+  for (let i = 0; i < keysA.length; i += 1) {
+    if (!keysB.includes(keysA[i]) || !isEqual(a[keysA[i]], b[keysA[i]]))
+      return false;
+  }
+
+  return true;
+}
+
 module.exports = {
   chunk,
   difference,
@@ -98,4 +122,5 @@ module.exports = {
   every,
   find,
   groupBy,
+  isEqual,
 };

@@ -245,7 +245,7 @@ describe('Task 2.', () => {
       expect(result).toEqual(expectedResult);
     });
   });
-  xdescribe('10 isEqual', () => {
+  describe('10 isEqual', () => {
     let object1;
     let object2;
     let object3;
