@@ -4,8 +4,8 @@ function chunk(arr, chunks) {
   }
 
   const result = [];
-  const container = arr.length;
-  for (let i = 0; i < container; i += chunks) {
+  const arrLength = arr.length;
+  for (let i = 0; i < arrLength; i += chunks) {
     result.push(arr.slice(i, i + chunks));
   }
   return result;
@@ -42,15 +42,6 @@ function flattenDeep(array) {
   if (array) return array.flat(Infinity);
   return [];
 }
-
-// function fromPairsFirst(arr) {
-//   if (!arr) return {};
-//   return arr.reduce((acc, next) => {
-//     const [a, b] = next;
-//     acc[a] = b;
-//     return acc;
-//   }, {});
-// }
 
 function fromPairs(arr) {
   if (!arr) return {};
