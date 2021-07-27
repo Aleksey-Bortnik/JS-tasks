@@ -20,7 +20,7 @@
     "prepare": "husky install",
     "format": "prettier --write js-tasks",
     "lint": "eslint ./js-tasks",
-    "lintAndPrettier": "npm run format && npm run lint",
+    "lp": "npm run format && npm run lint",
     "test" : "jasmine --config=jasmine.json"
   },
   "repository": {
