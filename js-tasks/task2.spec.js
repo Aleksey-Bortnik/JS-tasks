@@ -205,7 +205,7 @@ describe('Task 2.', () => {
       expect(result).toBeNull();
     });
   });
-  xdescribe('9 groupBy', () => {
+  describe('9 groupBy', () => {
     let array;
     beforeEach(() => {
       array = ['one', 'two', 'three', 'four'];

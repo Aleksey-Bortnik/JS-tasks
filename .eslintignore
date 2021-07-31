@@ -1,5 +1,4 @@
 node_modules
 /.vscode
 /.git
-task1.spec.js
-task2.spec.js
+**/*.spec.js

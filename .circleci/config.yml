@@ -1,0 +1,17 @@
+version: 2.1
+executors: # a reusable executor
+  node:
+    docker:
+      - image: circleci/node:latest
+jobs:
+  test:
+    executor: node
+    steps:
+      - checkout
+      - run: npm i
+      - run: npm run test
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test

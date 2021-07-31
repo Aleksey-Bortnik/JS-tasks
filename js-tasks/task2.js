@@ -66,13 +66,13 @@ function find(arr, callback) {
   return arr.find(callback);
 }
 
-function groupBy(arr, cb) {
-  if (!arr) return null;
+function groupBy(arr, callback) {
+  if (!arr || typeof callback !== 'function') return {};
   return arr.reduce((acc, next) => {
-    if (!acc[cb(next)]) {
-      acc[cb(next)] = [];
+    if (!acc[callback(next)]) {
+      acc[callback(next)] = [];
     }
-    acc[cb(next)].push(next);
+    acc[callback(next)].push(next);
 
     return acc;
   }, {});
