@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 # run ESlint and Prettier
-npm run lp
+# npm run lp
